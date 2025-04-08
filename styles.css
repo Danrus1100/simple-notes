@@ -236,6 +236,15 @@ button:hover {
     padding: 0;
 }
 
+.github-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 14px;
+}
+
 .slider:before {
     content: "";
     position: absolute;
