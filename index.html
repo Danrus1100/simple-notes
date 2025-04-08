@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заметки</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <button id="sidebarToggle" class="sidebar-toggle">☰</button>
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>Заметки</h2>
+                <button id="themeToggle" class="icon-button">🌙</button>
+            </div>
+            <button id="newNote" class="new-note-btn">+ Новая заметка</button>
+            <div id="notesList" class="tabs-list"></div>
+        </div>
+        <div class="main-content">
+            <div class="editor-container">
+                <div class="note-header">
+                    <input type="text" id="noteTitle" placeholder="Название заметки..." class="title-input">
+                    <div class="controls">
+                        <label class="switch">
+                            <input type="checkbox" id="viewToggle">
+                            <span class="slider">
+                                <span class="slider-text">Редактор</span>
+                                <span class="slider-text">Просмотр</span>
+                            </span>
+                        </label>
+                        <button id="statsToggle" class="icon-button">ℹ️</button>
+                        <button id="saveNote">Сохранить</button>
+                    </div>
+                </div>
+                <div id="editorView" class="editor-view">
+                    <textarea id="noteInput" placeholder="# Введите текст заметки...&#10;Поддерживается Markdown"></textarea>
+                </div>
+                <div id="previewView" class="preview-view hidden">
+                    <div class="preview" id="markdownPreview"></div>
+                </div>
+            </div>
+            <div id="statsPanel" class="stats-panel hidden">
+                <div class="stats">
+                    <div>Слов: <span id="wordCount">0</span></div>
+                    <div>Символов: <span id="charCount">0</span></div>
+                    <div>Символов без пробелов: <span id="charNoSpaceCount">0</span></div>
+                    <div>Предложений: <span id="sentenceCount">0</span></div>
+                    <div>Параграфов: <span id="paragraphCount">0</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
